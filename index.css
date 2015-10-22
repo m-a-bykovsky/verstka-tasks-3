@@ -11,7 +11,7 @@ body{
     margin: 0 auto;
 }
 /***
-    ‘’‹ „‹ ’€‹–›
+    Π΅ΠΆΠΠ›Π Π”Π›Π― ΠΆΠΠ‘Π›ΠΠ¦Π«
 ***/
 table{
     border-collapse: collapse;
@@ -29,11 +29,11 @@ td,
 th{
     padding: 0.3rem;
 }
-/*  ‚ϋδελίεμ ρςπξκθ οπθ νΰβεδενθθ  */
+/*  Π’Ρ‹Π΄ΠµΠ»ΡΠµΠΌ ΡΡ‚Ρ€ΠΎΠΊΠΈ ΠΏΡ€ΠΈ Π½Π°Π²ΠµΠ΄ΠµΠ½ΠΈΠΈ  */
 tbody tr:hover{
     background: #ccc;
 }
-/*  ‚ϋδελίεμ ρςξλαφϋ οπθ νΰβεδενθθ  */
+/*  Π’Ρ‹Π΄ΠµΠ»ΡΠµΠΌ ΡΡ‚ΠΎΠ»Π±Ρ†Ρ‹ ΠΏΡ€ΠΈ Π½Π°Π²ΠµΠ΄ΠµΠ½ΠΈΠΈ  */
 td,
 th{
     position: relative;
@@ -69,21 +69,21 @@ th::after{
     transform: rotate(90deg);
 }
 /***
-    €‘’‰ ”‹’€–
+    Π¤ΠΠ›Π¬ΠΆΠ ΠΠ¦ΠΠ― ΠΠ ΠΠ›Π•ΠΆ/Π£Π›Π•ΠΆ
 ***/
-#iofly1:checked ~ table td{
-    display: table-cell;
+#iofly1:checked ~ table tr{
+    display: table-row;
 }
-#iofly2:checked ~ table td.arrivals,
-#iofly2:checked ~ table td.arrivals ~ td{   
+#iofly2:checked ~ table tr.arrivals,
+#iofly2:checked ~ table tr.arrivals ~ td{   
     display: none;
 }
-#iofly3:checked ~ table td.departures,
-#iofly3:checked ~ table td.departures ~ td{   
+#iofly3:checked ~ table tr.departures,
+#iofly3:checked ~ table tr.departures ~ td{   
     display: none;
 }
 /***
-    ’€‚€ „€›•  …‰‘… € ’…‹…”
+    ΠΠΆΠΠ ΠΠ’ΠΠ Π”ΠΠΠΠ«Π¥ Π Π Π•Π™Π΅Π• ΠΠ ΠΆΠ•Π›Π•Π¤ΠΠ
 ***/
 form{
     margin: 1em 0;
@@ -120,8 +120,8 @@ form:valid input[type="submit"]{
     display: block;
 }
 /***
-    ”‹’€–  €’“ €‡€—…
+    Π¤ΠΠ›Π¬ΠΆΠ ΠΠ¦ΠΠ― ΠΠ Π“ΠΠ ΠΠ”ΠΠ
 ***/
-#arrival-city ~ table td[value="‹ΰπνΰκΰ"]{
+#arrival-city[value="ΠΠΎΡΠΊΠ²Π°"] ~ table tbody tr:not([data-arrival-city="ΠΠΎΡΠΊΠ²Π°"]){
     display: none;
 }
