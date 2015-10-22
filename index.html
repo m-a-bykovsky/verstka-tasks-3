@@ -4,14 +4,168 @@
         <meta charset="utf-8">
         <title>Лет ми спик фром май харт</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
     </head>
     <body>
-        <!-- Поле для фильтрации по городу -->
-        <input
-            type="text"
-            placeholder="Город отправления"
-            value=""
-            onkeyup="this.setAttribute('value', this.value)">
+        <main>
+            <header>
+                <h1>Онлайн-табло</h1>
+            </header>
+            <section>
+                <h2>Настройки фильтрации</h3>
+                <!-- Поля фильтрации по прилету/отлету -->
+                <p>Фильтрация по типу рейса (прилет/отлет)</p>
+                <input type="radio" name="dataSetting" checked="checked" class="iofly" id="iofly1">
+                <label for="iofly1"></label>
+                <input type="radio" name="dataSetting" class="iofly" id="iofly2">
+                <label for="iofly2"></label>
+                <input type="radio" name="dataSetting" class="iofly" id="iofly3">
+                <label for="iofly3"></label>
+                <!-- Поле для фильтрации по городу -->
+                <p>Фильтрация по аэропорту назначения</p>
+                <input
+                    id="arrival-city"
+                    type="text"
+                    placeholder="Аэропорт назначения"
+                    value=""
+                    onkeyup="this.setAttribute('value', this.value)">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Тип рейса
+                            </th>
+                            <th>
+                                Номер рейса
+                            </th>
+                            <th>
+                                Авиакомпания
+                            </th>
+                            <th>
+                                Тип воздушного судна
+                            </th>
+                            <th>
+                                Аэропорт назначения
+                            </th>
+                            <th>
+                                Время вылета/прилета
+                            </th>
+                            <th>
+                                Номер терминала
+                            </th>
+                            <th>
+                                Статус рейса
+                            </th>                      
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="arrivals">
+                                <p title="Прилет" class="fa fa-plane inverse"></p>
+                            </td>
+                            <td>
+                                U6-855
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/416.gif" title="Уральские авиалинии">
+                            </td>
+                            <td>
+                                U6-855
+                            </td>
+                            <td data-arrival-city="Москва">
+                                Москва/Шрм
+                            </td>
+                            <td>
+                                21 Окт 22:05
+                            </td>
+                            <td>
+                                A
+                            </td>
+                            <td>
+                                Приземлился
+                            </td>                      
+                        </tr>
+                        <tr>
+                            <td class="departures">
+                                <p title="Вылет" class="fa fa-plane"></p>
+                            </td>
+                            <td>
+                                U6-855
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/313.gif" title="Uzur Air — Производственно-Коммерческая Фирма Катэкавиа">
+                            </td>
+                            <td>
+                                B-767-300
+                            </td>
+                            <td data-arrival-city="Анталья">
+                                Анталья
+                            </td>
+                            <td>
+                                22 Окт 00:50	
+                            </td>
+                            <td>
+                                B
+                            </td>
+                            <td>
+                                Регистрация
+                            </td>                      
+                        </tr>
+                        <tr>
+                            <td class="departures">
+                                <p title="Вылет" class="fa fa-plane"></p>
+                            </td>
+                            <td>
+                                SU-1406
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/397.gif" title="Аэрофлот — Российские Авиалинии">
+                            </td>
+                            <td>
+                                A-321
+                            </td>
+                            <td data-arrival-city="Ларнака">
+                                Ларнака
+                            </td>
+                            <td>
+                                22 Окт 00:55
+                            </td>
+                            <td>
+                                C
+                            </td>
+                            <td>
+                                Отменен
+                            </td>                      
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <div id="dataSendPhone">
+                    <form action="#" method="POST">
+                        <h3>Отправка данных о рейсе на телефон</h3>
+                        <div>
+                            <input 
+                                type="tel"
+                                name="userTel"
+                                pattern="^\+\d{1}\(\d{3}\)\d{3}-\d{2}-\d{2}$"
+                                placeholder="Введите телефон"
+                                maxlength="16"
+                                required>
+                            <p class="description">Телефон в формате +7(912)121-21-21</p>
+                            <span class="fa fa-check-circle-o"></span>
+                        </div>
+                        <div>
+                            <input type="email" name="userEmail" placeholder="Введите e-mail" required>
+                            <p class="description">Адрес электронного почтового ящика, н-р: m.a.bykovsky@ya.ru</p>
+                            <span class="fa fa-check-circle-o"></span>
+                        </div>    
+                        <input type="submit" value="Отправить данные о рейсе на телефон">
+                    </form>
+                </div>
+            </section>
+        </main>
+        
 
         <!-- Здесь применять вашу самую сильную магию -->
     </body>
