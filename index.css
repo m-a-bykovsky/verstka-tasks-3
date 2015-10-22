@@ -1,0 +1,127 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+body{
+    font: 14px Arial;
+    max-width: 1000px;
+    min-width: 700px;
+    margin: 0 auto;
+}
+/***
+    ‘’‹ „‹ ’€‹–›
+***/
+table{
+    border-collapse: collapse;
+    margin: 2rem 0;
+    overflow: hidden;
+    width: 100%;
+}
+thead {
+    font-size: .8em;
+}
+tbody tr:nth-child(odd){
+    background: #eee;
+}
+td,
+th{
+    padding: 0.3rem;
+}
+/*  ‚ϋδελίεμ ρςπξκθ οπθ νΰβεδενθθ  */
+tbody tr:hover{
+    background: #ccc;
+}
+/*  ‚ϋδελίεμ ρςξλαφϋ οπθ νΰβεδενθθ  */
+td,
+th{
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+td img{
+    vertical-align: middle;
+}
+td:hover,
+th:hover{
+    z-index: 1;
+}
+td:hover::before,
+td:hover::after,
+th:hover::after{
+    background: #ccc;
+    content:"";
+    height: 9999px;
+    left:0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+td::before{
+    top: -9999px;
+}
+td::after,
+th::after{
+    top: 0px;
+}
+.fa.inverse{
+    transform: rotate(90deg);
+}
+/***
+    €‘’‰ ”‹’€–
+***/
+#iofly1:checked ~ table td{
+    display: table-cell;
+}
+#iofly2:checked ~ table td.arrivals,
+#iofly2:checked ~ table td.arrivals ~ td{   
+    display: none;
+}
+#iofly3:checked ~ table td.departures,
+#iofly3:checked ~ table td.departures ~ td{   
+    display: none;
+}
+/***
+    ’€‚€ „€›•  …‰‘… € ’…‹…”
+***/
+form{
+    margin: 1em 0;
+}
+form > div{
+    position: relative;
+    margin: 16px 0 ;
+}
+input[type="submit"],
+input ~ span.fa{
+    display: none;
+}
+p.description{
+    display: none;
+    font-size: 8px;
+    top: -1.5rem;
+    position: absolute;
+    padding: 3px;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 5px 5px 0 0;
+}
+input:valid ~ span.fa{
+    display: inline;
+    color: #8f8;
+}
+input:focus + p.description{
+    display: block;
+}
+input:focus:invalid{
+    background: #ffe3cf;
+}
+form:valid input[type="submit"]{
+    display: block;
+}
+/***
+    ”‹’€–  €’“ €‡€—…
+***/
+#arrival-city ~ table td[value="‹ΰπνΰκΰ"]{
+    display: none;
+}
