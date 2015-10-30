@@ -1,10 +1,12 @@
 html,
-body{
+body
+{
     margin: 0;
     padding: 0;
     width: 100%;
 }
-body{
+body
+{
     font: 14px Arial;
     max-width: 1000px;
     min-width: 700px;
@@ -13,43 +15,52 @@ body{
 /***
     СТИЛИ ДЛЯ ТАБЛИЦЫ
 ***/
-table{
+table
+{
     border-collapse: collapse;
     margin: 2rem 0;
     overflow: hidden;
     width: 100%;
 }
-thead {
+thead 
+{
     font-size: .8em;
 }
-tbody tr:nth-child(odd){
+tbody tr:nth-child(odd)
+{
     background: #eee;
 }
 td,
-th{
+th
+{
     padding: 0.3rem;
 }
 /*  Выделяем строки при наведении  */
-tbody tr:hover{
+tbody tr:hover
+{
     background: #ccc;
 }
 /*  Выделяем столбцы при наведении  */
 td,
-th{
+th
+{
     position: relative;
     text-align: center;
     z-index: 2;
 }
-td img{
+td img
+{
     vertical-align: middle;
 }
 td:hover,
-th:hover{
+th:hover
+{
     z-index: 1;
 }
 td:hover::before,
 td:hover::after,
-th:hover::after{
+th:hover::after
+{
     background: #ccc;
     content:"";
     height: 9999px;
@@ -58,45 +69,55 @@ th:hover::after{
     width: 100%;
     z-index: -1;
 }
-td::before{
+td::before
+{
     top: -9999px;
 }
 td::after,
-th::after{
+th::after
+{
     top: 0px;
 }
-.fa.inverse{
+.fa.inverse
+{
     transform: rotate(90deg);
 }
 /***
     ФИЛЬТРАЦИЯ ПРИЛЕТ/УЛЕТ
 ***/
-#iofly1:checked ~ table tr{
+#iofly1:checked ~ table tr
+{
     display: table-row;
 }
 #iofly2:checked ~ table tr.arrivals,
-#iofly2:checked ~ table tr.arrivals ~ td{   
+#iofly2:checked ~ table tr.arrivals ~ td
+{   
     display: none;
 }
 #iofly3:checked ~ table tr.departures,
-#iofly3:checked ~ table tr.departures ~ td{   
+#iofly3:checked ~ table tr.departures ~ td
+{   
     display: none;
 }
 /***
     ОТПРАВКА ДАННЫХ О РЕЙСЕ НА ТЕЛЕФОН
 ***/
-form{
+form
+{
     margin: 1em 0;
 }
-form > div{
+form > div
+{
     position: relative;
     margin: 16px 0 ;
 }
 input[type="submit"],
-input ~ span.fa{
+input ~ span.fa
+{
     display: none;
 }
-p.description{
+p.description
+{
     display: none;
     font-size: 8px;
     top: -1.5rem;
@@ -106,22 +127,29 @@ p.description{
     border: 1px solid #ddd;
     border-radius: 5px 5px 0 0;
 }
-input:valid ~ span.fa{
+input:valid ~ span.fa
+{
     display: inline;
     color: #8f8;
 }
-input:focus + p.description{
+input:focus + p.description
+{
     display: block;
 }
-input:focus:invalid{
+input:focus:invalid
+{
     background: #ffe3cf;
 }
-form:valid input[type="submit"]{
+form:valid input[type="submit"]
+{
     display: block;
 }
 /***
     ФИЛЬТРАЦИЯ ПО ГОРОДАМ
 ***/
-#arrival-city[value="Москва"] ~ table tbody tr:not([data-arrival-city="Москва"]){
+#arrival-city[value="Анталья"] ~ table tbody tr:not([data-arrival-city="Анталья"]),
+#arrival-city[value="Москва"] ~ table tbody tr:not([data-arrival-city="Москва"]),
+#arrival-city[value="Ларнака"] ~ table tbody tr:not([data-arrival-city="Ларнака"])
+{
     display: none;
 }
