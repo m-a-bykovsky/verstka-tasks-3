@@ -85,6 +85,24 @@ th::after
 /***
     ФИЛЬТРАЦИЯ ПРИЛЕТ/УЛЕТ
 ***/
+input[id*="iofly"]
+{
+    display: none;
+}
+input[id*="iofly"] + label
+{
+    display: inline-block;
+    margin: 0 10px;
+}
+input[id*="iofly"] + label span
+{
+    cursor: pointer;
+    padding: 10px;
+}
+input[id*="iofly"]:checked + label span{
+    background: #ccc;
+    border-radius: 10px;    
+}
 #iofly1:checked ~ table tr
 {
     display: table-row;
@@ -145,11 +163,18 @@ form:valid input[type="submit"]
     display: block;
 }
 /***
-    ФИЛЬТРАЦИЯ ПО ГОРОДАМ
+    ФИЛЬТРАЦИЯ ПО ГOРОДАМ
 ***/
 #arrival-city[value="Анталья"] ~ table tbody tr:not([data-arrival-city="Анталья"]),
+#arrival-city[value="Екатеринбург"] ~ table tbody tr:not([data-arrival-city="Екатеринбург"]),
+#arrival-city[value="Ларнака"] ~ table tbody tr:not([data-arrival-city="Ларнака"]),
+#arrival-city[value="Краснодар"] ~ table tbody tr:not([data-arrival-city="Краснодар"]),
 #arrival-city[value="Москва"] ~ table tbody tr:not([data-arrival-city="Москва"]),
-#arrival-city[value="Ларнака"] ~ table tbody tr:not([data-arrival-city="Ларнака"])
+#arrival-city[value="Пекин"] ~ table tbody tr:not([data-arrival-city="Пекин"]),
+#arrival-city[value="Пермь"] ~ table tbody tr:not([data-arrival-city="Пермь"]),
+#arrival-city[value="Сургут"] ~ table tbody tr:not([data-arrival-city="Сургут"]),
+#arrival-city[value="Сызрань"] ~ table tbody tr:not([data-arrival-city="Сызрань"]),
+#arrival-city[value="Хургада"] ~ table tbody tr:not([data-arrival-city="Хургада"])
 {
     display: none;
 }
