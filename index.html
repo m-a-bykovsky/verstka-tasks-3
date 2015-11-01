@@ -14,15 +14,21 @@
             <section>
                 <h2>Настройки фильтрации</h3>
                 <!-- Поля фильтрации по прилету/отлету -->
-                <p>Фильтрация по типу рейса (прилет/отлет)</p>
+                <h3>1. Фильтрация по типу рейса (прилет/отлет)</h3>
                 <input type="radio" name="dataSetting" checked="checked" class="iofly" id="iofly1">
-                <label for="iofly1"></label>
+                <label for="iofly1">
+                    <span>туды-сюды</span>
+                </label>
                 <input type="radio" name="dataSetting" class="iofly" id="iofly2">
-                <label for="iofly2"></label>
+                <label for="iofly2">
+                    <span title="Вылет" class="fa fa-plane"></span>
+                </label>
                 <input type="radio" name="dataSetting" class="iofly" id="iofly3">
-                <label for="iofly3"></label>
+                <label for="iofly3">
+                    <span title="Прилет" class="fa fa-plane inverse"></span>
+                </label>
                 <!-- Поле для фильтрации по городу -->
-                <p>Фильтрация по аэропорту назначения</p>
+                <h3>2. Фильтрация по аэропорту назначения</h3>
                 <input
                     id="arrival-city"
                     type="text"
@@ -59,29 +65,85 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <tr class="departures" data-arrival-city="Хургада">
+                            <td>
+                                <p title="Вылет" class="fa fa-plane"></p>
+                            </td>
+                            <td>
+                                N4-8837
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/1411.gif" 
+                                alt="Nord Wind" 
+                                title="Nord Wind">
+                            </td>
+                            <td>
+                                A-321
+                            </td>
+                            <td>
+                                Хургада
+                            </td>
+                            <td>
+                                21 Окт 21:05
+                            </td>
+                            <td>
+                                E
+                            </td>
+                            <td>
+                                Вылетел
+                            </td>                      
+                        </tr>
                         <tr class="arrivals" data-arrival-city="Москва">
                             <td>
                                 <p title="Прилет" class="fa fa-plane inverse"></p>
                             </td>
                             <td>
-                                U6-855
+                                PS-9051
                             </td>
                             <td>
-                                <img src="http://www.koltsovo.ru/attels/logo4site/416.gif" 
-                                alt="Уральские авиалинии" 
-                                title="Уральские авиалинии">
+                                <img src="http://www.koltsovo.ru/attels/logo4site/371.gif" 
+                                alt="Международные Авиалинии Украины" 
+                                title="Международные Авиалинии Украины">
                             </td>
                             <td>
-                                U6-855
+                                A-319
+                            </td>
+                            <td>
+                                Москва/Дмд
+                            </td>
+                            <td>
+                                21 Окт 21:10
+                            </td>
+                            <td>
+                                A
+                            </td>
+                            <td>
+                                Приземлился
+                            </td>                      
+                        </tr>
+                        <tr class="arrivals" data-arrival-city="Москва">
+                            <td>
+                                <p title="Прилет" class="fa fa-plane inverse"></p>
+                            </td>
+                            <td>
+                                DP-403
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/4831.gif" 
+                                alt="Авиакомпания Победа" 
+                                title="Авиакомпания Победа">
+                            </td>
+                            <td>
+                                B-737-800W
                             </td>
                             <td>
                                 Москва/Шрм
                             </td>
                             <td>
-                                21 Окт 22:05
+                                21 Окт 21:10
                             </td>
                             <td>
-                                A
+                                D
                             </td>
                             <td>
                                 Приземлился
@@ -106,13 +168,41 @@
                                 Анталья
                             </td>
                             <td>
-                                22 Окт 00:50
+                                21 Окт 21:15
                             </td>
                             <td>
                                 B
                             </td>
                             <td>
-                                Регистрация
+                                Вылетел
+                            </td>                      
+                        </tr>
+                        <tr class="arrivals" data-arrival-city="Пекин">
+                            <td>
+                                <p title="Прилет" class="fa fa-plane inverse"></p>
+                            </td>
+                            <td>
+                                S7-4571
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/390.gif" 
+                                alt="Сибирь S7"
+                                title="Сибирь S7">
+                            </td>
+                            <td>
+                                A-320
+                            </td>
+                            <td>
+                                Пекин
+                            </td>
+                            <td>
+                                21 Окт 21:15
+                            </td>
+                            <td>
+                                B
+                            </td>
+                            <td>
+                                Приземлился
                             </td>                      
                         </tr>
                         <tr class="departures" data-arrival-city="Ларнака">
@@ -134,10 +224,262 @@
                                 Ларнака
                             </td>
                             <td>
-                                22 Окт 00:55
+                                21 Окт 21:25
                             </td>
                             <td>
                                 C
+                            </td>
+                            <td>
+                                Отменен
+                            </td>                      
+                        </tr> 
+                        <tr class="departures" data-arrival-city="Краснодар">
+                            <td>
+                                <p title="Вылет" class="fa fa-plane"></p>
+                            </td>
+                            <td>
+                                SU-5144
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/397.gif" 
+                                alt="Аэрофлот — Российские Авиалинии" 
+                                title="Аэрофлот — Российские Авиалинии">
+                            </td>
+                            <td>
+                                A-319
+                            </td>
+                            <td>
+                                Краснодар
+                            </td>
+                            <td>
+                                21 Окт 21:50
+                            </td>
+                            <td>
+                                E
+                            </td>
+                            <td>
+                                Вылетел
+                            </td>                      
+                        </tr>
+                        <tr class="arrivals" data-arrival-city="Пермь">
+                            <td>
+                                <p title="Прилет" class="fa fa-plane inverse"></p>
+                            </td>
+                            <td>
+                                O7-53
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/2171.gif" 
+                                alt="Международный Аэропорт Оренбург"
+                                title="Международный Аэропорт Оренбург">
+                            </td>
+                            <td>
+                                Л-410
+                            </td>
+                            <td>
+                                Пермь
+                            </td>
+                            <td>
+                                21 Окт 22:10
+                            </td>
+                            <td>
+                                B
+                            </td>
+                            <td>
+                                Приземлился
+                            </td>                      
+                        </tr>
+                        <tr class="departures" data-arrival-city="Екатеринбург">
+                            <td>
+                                <p title="Вылет" class="fa fa-plane"></p>
+                            </td>
+                            <td>
+                                IB-7250
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/3152.gif" 
+                                alt="Iberia" 
+                                title="Iberia">
+                            </td>
+                            <td>
+                                A-319
+                            </td>
+                            <td>
+                                Екатеринбург
+                            </td>
+                            <td>
+                                21 Окт 22:20
+                            </td>
+                            <td>
+                                C
+                            </td>
+                            <td>
+                                Посадка закончена
+                            </td>                      
+                        </tr>                    
+                        <tr class="departures" data-arrival-city="Сургут">
+                            <td>
+                                <p title="Вылет" class="fa fa-plane"></p>
+                            </td>
+                            <td>
+                                UT-112
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/515.gif" 
+                                alt="ЮТэйр" 
+                                title="ЮТэйр">
+                            </td>
+                            <td>
+                                AT-72-5
+                            </td>
+                            <td>
+                                Сургут
+                            </td>
+                            <td>
+                                21 Окт 22:25
+                            </td>
+                            <td>
+                                D
+                            </td>
+                            <td>
+                                Посадка закончена
+                            </td>                      
+                        </tr>
+                        <tr class="arrivals" data-arrival-city="Москва">
+                            <td>
+                                <p title="Прилет" class="fa fa-plane inverse"></p>
+                            </td>
+                            <td>
+                                U6-2903
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/416.gif" 
+                                alt="Уральские авиалинии" 
+                                title="Уральские авиалинии">
+                            </td>
+                            <td>
+                                U6-855
+                            </td>
+                            <td>
+                                Москва/Шрм
+                            </td>
+                            <td>
+                                21 Окт 22:40
+                            </td>
+                            <td>
+                                A
+                            </td>
+                            <td>
+                                Задерживается до 23:15
+                            </td>                      
+                        </tr>
+                        <tr class="arrivals" data-arrival-city="Москва">
+                            <td>
+                                <p title="Прилет" class="fa fa-plane inverse"></p>
+                            </td>
+                            <td>
+                                DP-405
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/4831.gif" 
+                                alt="Авиакомпания Победа" 
+                                title="Авиакомпания Победа">
+                            </td>
+                            <td>
+                                B-737-800W
+                            </td>
+                            <td>
+                                Москва/Шрм
+                            </td>
+                            <td>
+                                21 Окт 22:45
+                            </td>
+                            <td>
+                                B
+                            </td>
+                            <td>
+                                Летит
+                            </td>                      
+                        </tr>                        
+                        <tr class="departures" data-arrival-city="Сызрань">
+                            <td>
+                                <p title="Вылет" class="fa fa-plane"></p>
+                            </td>
+                            <td>
+                                U6-875
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/313.gif" 
+                                alt="Uzur Air — Производственно-Коммерческая Фирма Катэкавиа"
+                                title="Uzur Air — Производственно-Коммерческая Фирма Катэкавиа">
+                            </td>
+                            <td>
+                                B-767-300
+                            </td>
+                            <td>
+                                Сызрань
+                            </td>
+                            <td>
+                                22 Окт 00:50
+                            </td>
+                            <td>
+                                B
+                            </td>
+                            <td>
+                                Регистрация
+                            </td>                      
+                        </tr>
+                        <tr class="arrivals" data-arrival-city="Екатеринбург">
+                            <td>
+                                <p title="Прилет" class="fa fa-plane inverse"></p>
+                            </td>
+                            <td>
+                                S7-4333
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/390.gif" 
+                                alt="Сибирь S7"
+                                title="Сибирь S7">
+                            </td>
+                            <td>
+                                A-321
+                            </td>
+                            <td>
+                                Екатеринбург
+                            </td>
+                            <td>
+                                22 Окт 00:55
+                            </td>
+                            <td>
+                                B
+                            </td>
+                            <td>
+                                Летит
+                            </td>                      
+                        </tr>
+                        <tr class="departures" data-arrival-city="Хургада">
+                            <td>
+                                <p title="Вылет" class="fa fa-plane"></p>
+                            </td>
+                            <td>
+                                SU-1415
+                            </td>
+                            <td>
+                                <img src="http://www.koltsovo.ru/attels/logo4site/397.gif" 
+                                alt="Аэрофлот — Российские Авиалинии" 
+                                title="Аэрофлот — Российские Авиалинии">
+                            </td>
+                            <td>
+                                A-321
+                            </td>
+                            <td>
+                                Хургада
+                            </td>
+                            <td>
+                                22 Окт 00:55
+                            </td>
+                            <td>
+                                E
                             </td>
                             <td>
                                 Отменен
